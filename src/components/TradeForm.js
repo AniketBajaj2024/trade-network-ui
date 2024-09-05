@@ -18,7 +18,7 @@ const TradeForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://tradenetworklive.onrender.com/api/trades', trade);
+      const response = await axios.post('https://tradenetwork-3.onrender.com/api/trades', trade);
       alert('Trade created successfully');
       console.log(response.data);
     } catch (error) {

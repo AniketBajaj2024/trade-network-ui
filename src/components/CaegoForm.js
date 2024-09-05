@@ -19,7 +19,7 @@ const CargoForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://tradenetworklive.onrender.com/api/cargo', cargo);
+      const response = await axios.post('https://tradenetwork-3.onrender.com/api/cargo', cargo);
       alert('Cargo created successfully');
       console.log(response.data);
     } catch (error) {
