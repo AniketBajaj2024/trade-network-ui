@@ -6,7 +6,7 @@ const Inventory = () => {
 
   useEffect(() => {
     // Connect to WebSocket
-    const websocket = new WebSocket('wss://tradenetwork-3.onrender.com');
+    const websocket = new WebSocket('ws://localhost:3000');
 
     websocket.onopen = ()=>{
       console.log('Websocket connection established');
