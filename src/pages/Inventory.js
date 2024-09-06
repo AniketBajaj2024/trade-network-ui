@@ -6,7 +6,11 @@ const Inventory = () => {
 
   useEffect(() => {
     // Connect to WebSocket
-    const websocket = new WebSocket('wss://your-backend-app-name.onrender.com');
+    const websocket = new WebSocket('wss://tradenetwork-3.onrender.com');
+
+    websocket.onopen = ()=>{
+      console.log('Websocket connection established');
+    }
 
     websocket.onmessage = (event) => {
       const message = JSON.parse(event.data);
@@ -18,6 +22,10 @@ const Inventory = () => {
     };
 
     websocket.onclose = () => console.log('WebSocket connection closed.');
+    websocket.onerror = (error) => {
+      console.error('WebSocket Error:', error);
+    };
+
 
     return () => {
       websocket.close();
