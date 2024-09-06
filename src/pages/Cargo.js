@@ -1,13 +1,14 @@
-import React from 'react';
-import CargoForm from '../components/CaegoForm';
+import React from "react";
+import CargoForm from "../components/CaegoForm";
+import Layout from "../components/Layout";
 
 const Cargo = () => {
   return (
-    <div>
-      <h2>Cargo Management</h2>
-      {/* UI for managing cargo will go here */}
-      <CargoForm/>
-    </div>
+      <Layout>
+        <h2>Cargo Management</h2>
+        {/* UI for managing cargo will go here */}
+        <CargoForm />
+      </Layout>
   );
 };
 
